@@ -1,0 +1,14 @@
+<h1> Testing classic component way</h1>
+
+<ul>
+
+  
+</ul>
+
+{{#flexi-notify type = 'info' close = (action "onCloseNotify")}}
+  <p>Block uses :: flexi-notify</p>
+{{/flexi-notify}}
+
+{{flexi-notify type = 'success' text='non block component :: flexi-notify' close=(action "onCloseNotify")}}
+{{flexi-classic-notify-pod type = 'success' text='non block component :: flexi-classic-notify-pod' close=(action "onCloseNotify")}}
+{{flexi-classic-notify type = 'success' text='non block component :: flexi-classic-notify' close=(action "onCloseNotify")}}

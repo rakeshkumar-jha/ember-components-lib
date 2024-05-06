@@ -1,0 +1,18 @@
+<div class="flex-notify-container">
+  <ul class="flex-notify-switcher">
+    <li> <button type="button" {{on "click" (fn this.changeNotifyType 'info')}}>Info</button> </li>
+    <li> <button type="button" {{on "click" (fn this.changeNotifyType 'success')}}>Success</button> </li>
+    <li><button type="button" {{on "click" (fn this.changeNotifyType 'warning')}}>Warning</button></li>
+    <li><button type="button" {{on "click" (fn this.changeNotifyType 'danger')}}>Danger</button></li>
+  </ul>
+  <div class="flex-notify flex-notify-{{this.notificationType}}">
+    <button type="button" {{on "click" this.closeNotify}}> &times; </button>
+    {{#if hasBlock}}
+      {{yield}}
+    {{else}}
+      <p class="flex-notify-text">
+        {{@text}}
+      </p>
+    {{/if}}
+  </div>
+</div>

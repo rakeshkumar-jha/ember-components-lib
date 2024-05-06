@@ -1,0 +1,1 @@
+export { default } from 'ember-components-lib/components/flexi-notify';

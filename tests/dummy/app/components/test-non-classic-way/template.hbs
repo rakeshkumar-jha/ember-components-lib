@@ -1,0 +1,19 @@
+<h1> Testing non classic component way</h1>
+
+<FlexiNotify @type="danger" @text ="Non block uses :: FlexiNotify" @close = {{this.onCloseNotify}}/>
+
+<FlexiNotify @type="danger" @close = {{this.onCloseNotify}}>
+    <p>Block uses :: FlexiNotify</p>
+</FlexiNotify>
+
+<FlexiClassicNotify @type="danger" @text="Non block uses :: FlexiClassicNotify" @close={{this.onCloseNotify}}/>
+
+<FlexiClassicNotify @type="danger" @close={{this.onCloseNotify}}>
+  <p>Block uses :: FlexiClassicNotify</p>
+</FlexiClassicNotify>
+
+<FlexiClassicNotifyPod @type="danger" @text="Non block uses :: FlexiClassicNotifyPod" @close={{this.onCloseNotify}}/>
+
+<FlexiClassicNotifyPod @type="danger" @close={{this.onCloseNotify}}>
+  <p>Block uses :: FlexiClassicNotifyPod</p>
+</FlexiClassicNotifyPod>

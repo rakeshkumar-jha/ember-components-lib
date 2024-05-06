@@ -1,0 +1,19 @@
+<div class="flex-notify-container">
+  <p> flex-classic-notify-pod</p>
+  <ul class="flex-notify-switcher">
+    <li> <button type="button" {{action "changeNotifyType" 'info'}}>Info</button> </li>
+    <li> <button type="button" {{action "changeNotifyType" 'success'}}>Success</button> </li>
+    <li><button type="button" {{action "changeNotifyType" 'warning'}}>Warning</button></li>
+    <li><button type="button" {{action "changeNotifyType" 'danger'}}>Danger</button></li>
+  </ul>
+  <div class="flex-notify flex-notify-{{this.notificationType}}">
+    <button type="button" {{action "closeNotify"}}> &times; </button>
+    {{#if hasBlock}}
+      {{yield}}
+    {{else}}
+      <p class="flex-notify-text">
+        {{@text}}
+      </p>
+    {{/if}}
+  </div>
+</div>

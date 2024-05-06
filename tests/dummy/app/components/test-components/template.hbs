@@ -1,0 +1,14 @@
+<ul>
+  <li {{on 'click' (fn this.switchTestType 'classic')}}>
+    Classic
+  </li>
+  <li {{on 'click' (fn this.switchTestType 'non_classic')}}> Non Classic </li>
+</ul>
+
+<div>
+  {{#if this.isClassicTesting}}
+    {{test-classic-way}}
+  {{else}}
+    <TestNonClassicWay/>
+  {{/if}}
+</div>
